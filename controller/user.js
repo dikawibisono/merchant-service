@@ -1,11 +1,8 @@
 const express = require('express');
-// const bodyParser = require('body-parser');
 const db = require('../model/dbMerchantService');
 
-// const router = express.Router();
 
-// router.use(bodyParser.json());
-
+//get user of merchant service
 const showUser = (req, res) => {
     db.query("SELECT * FROM merchant_table", (err, result) => {
         if(err) throw err;
@@ -13,7 +10,7 @@ const showUser = (req, res) => {
     })
 }
 
-
+//add user for merchant service
 const addUser = (req, res) => {
     const {password_merchant, name_merchant, address_merchant,phone_number } = req.body;
     
@@ -24,6 +21,7 @@ const addUser = (req, res) => {
     })
 }
 
+//user can delete account by id
 const deleteUser = (req, res) => {
     const id = req.params.id
     const sqlQuery = "DELETE FROM merchant_table WHERE id_merchant = ?";
