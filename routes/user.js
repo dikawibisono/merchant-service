@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {showUser, addUser, deleteUser} = require('../controller/user');
 const router = express.Router();
+
 router.use(bodyParser.json());
 
 router.get('/', showUser)

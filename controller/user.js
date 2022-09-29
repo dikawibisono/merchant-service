@@ -1,6 +1,4 @@
-const express = require('express');
 const db = require('../model/dbMerchantService');
-
 
 //get user of merchant service
 const showUser = (req, res) => {
