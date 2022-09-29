@@ -1,8 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const {addUser, deleteUser} = require('../controller/user');
+const {showUser, addUser, deleteUser} = require('../controller/user');
 const router = express.Router();
 router.use(bodyParser.json());
+
+router.get('/', showUser)
 
 router.post('/', addUser)
 
