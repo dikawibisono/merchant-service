@@ -1,6 +1,6 @@
 const express = require('express');
 const userMerchant = require('./routes/user');
-const productsMerchant = require('./routes/products');
+const productsMerchant = require('./routes/product');
 
 const app = express();
 const PORT = 3000
@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 
 app.use('/user', userMerchant)
 
-app.use('/products', productsMerchant)
+app.use('/product', productsMerchant)
 
 app.listen(PORT, () => {
     console.log(`Listenin on port ${PORT}`)

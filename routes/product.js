@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const {addProduct, deleteProduct, updateProduct, getProduct} = require('../controller/products')
+const {addProduct, deleteProduct, updateProduct, getProduct} = require('../controller/product')
 const router = express.Router();
 
 router.use(bodyParser.json());
