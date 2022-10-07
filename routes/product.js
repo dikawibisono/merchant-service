@@ -2,15 +2,16 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const {addProduct, deleteProduct, updateProduct, getProduct} = require('../controller/product')
 const router = express.Router();
+const verifytoken = require('../controller/verifytoken')
 
 router.use(bodyParser.json());
 
-router.post('/', addProduct)
+router.post('/',verifytoken, addProduct)
 
-router.delete('/:id', deleteProduct)
+router.delete('/:id',verifytoken, deleteProduct)
 
-router.put('/:id', updateProduct)
+router.put('/:id',verifytoken, updateProduct)
 
-router.get('/', getProduct)
+router.get('/',verifytoken, getProduct)
 
 module.exports = router;
