@@ -13,8 +13,6 @@ const login = (req, res) => {
 
     let user = auth(req)
 
-    // console.log(user)
-
     if (user === undefined) {
     return res.status(401).json({message: 'not authorized!'})
     }
