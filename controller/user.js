@@ -22,7 +22,6 @@ const addUser = (req, res) => {
     if(name_merchant.length <= 3 || name_merchant.length >= 50 ){return res.status(400).send('name_merchant must be at least 3 characters and not more than 50 characters')}
     if(isNaN(phone_number)){return res.status(400).send('phone_number must be a number')}
 
-
     const sqlQuery = "INSERT INTO merchant_table (password_merchant, name_merchant, address_merchant, phone_number) VALUES (?, ?, ?, ?)";
     db.query(sqlQuery, [password_merchant, name_merchant, address_merchant, phone_number], (err, result) => {
         if(err) throw err;
