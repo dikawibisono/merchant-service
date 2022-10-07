@@ -7,8 +7,8 @@ This is how entity relationship work shown by diagram.
 ![ERD Merchant Service](https://user-images.githubusercontent.com/97390732/193992313-800d63f4-e9b6-4585-8ee6-3b6a9d086d10.png)
 
 
-This is a architecture diagram of merchant service
 ## Architecture Diagram Merchant Service
+This is a architecture diagram of merchant service
 ![Architecture Diagram Merchant Service](https://user-images.githubusercontent.com/97390732/193992324-24f317ef-a574-4dbb-95cd-1fd6ece2d2e5.png)
 
 
@@ -20,7 +20,7 @@ These are the list of API /user
 
 [POST] /user -> to create account on merchant service
 
-[DEL] /user -> to delete account on merchant service
+[DEL] /user/{id} -> to delete account on merchant service
 ```
 
 These are the list of API /product
@@ -29,9 +29,9 @@ These are the list of API /product
 
 [POST] /product -> to add product on merchant service
 
-[DEL] /product -> to delete product on merchant service
+[DEL] /product/{id} -> to delete product on merchant service
 
-[PUT] /product -> to update product on merchant service
+[PUT] /product/{id} -> to update product on merchant service
 ```
 
 This is the API /login
